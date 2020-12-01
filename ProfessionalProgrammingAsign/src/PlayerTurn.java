@@ -1,9 +1,10 @@
 
 /**
  * Class to handle the players turn
- * @author ryand
- * 01/12/2020
+ * 
+ * @author ryand 01/12/2020 Ver 1.0.1
  */
+
 public class PlayerTurn {
 
 	/**

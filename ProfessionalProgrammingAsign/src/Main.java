@@ -2,39 +2,38 @@ import java.util.Random;
 
 /**
  * Main class
- * @author ryand
- * 01/12/2020
- * Ver 1.0.1
+ * 
+ * @author ryand 01/12/2020 Ver 1.0.1
  */
 public class Main {
-	//create instances of classes
+	// create instances of classes
 	static Main run = new Main();
 	GUImain mainGUI = new GUImain();
 	ChkBoard chkBoard = new ChkBoard();
 	CompTurn compTurn = new CompTurn();
 	PlayerTurn playTurn = new PlayerTurn();
 
-	//variable to store player turn
+	// variable to store player turn
 	int player = 1;
 
 	/**
 	 * run the program
+	 * 
 	 * @param args none accepted
 	 */
 	public static void main(String[] args) {
 		run.setup();
 	}
 
-	 //setup the game board
+	// setup the game board
 	private void setup() {
 		chkBoard.setup();
 		mainGUI.displayGUI();
 	}
 
-
-	 /**
-	  * main program loop
-	  */
+	/**
+	 * main program loop
+	 */
 	public void loop() {
 		if (!run.chkBoard.chkWin()) {
 			if (player == 1) {
@@ -52,6 +51,7 @@ public class Main {
 
 	/**
 	 * returns the current player
+	 * 
 	 * @return value of the player variable
 	 */
 	public int getPlayer() {
@@ -60,6 +60,7 @@ public class Main {
 
 	/**
 	 * Method to run once a winner has been decided
+	 * 
 	 * @param player which player has won (1=P1, 2=P2, 3=Draw)
 	 */
 	public void win(int player) {
@@ -75,7 +76,8 @@ public class Main {
 	}
 
 	/**
-	 * Implements a wait(pause) in the program 
+	 * Implements a wait(pause) in the program
+	 * 
 	 * @param min min wait time in millis
 	 * @param max max wait time in millis
 	 */
@@ -90,4 +92,3 @@ public class Main {
 	}
 
 }
-

@@ -2,12 +2,12 @@ import java.util.Random;
 
 /**
  * Class to handle the computer players turn
- * @author ryand
- * 01/12/2020
+ * 
+ * @author ryand 01/12/2020 Ver 1.0.1
  */
 public class CompTurn {
 
-	//method to handle the computer players turn
+	// method to handle the computer players turn
 	public void turn() {
 		Main.run.mainGUI.setStatus("Computers Turn....");
 		Main.run.wait(1000, 2000);
@@ -15,10 +15,11 @@ public class CompTurn {
 		Main.run.mainGUI.compHandler(Main.run.chkBoard.getBtn(selectedTile));
 	}
 
-	//method to select which tile the computer will select
+	// method to select which tile the computer will select
 	private int selectTile() {
 		int tile = random();
-		//keeps randomly selecting tiles and checking to see if they are free until it has a free tile
+		// keeps randomly selecting tiles and checking to see if they are free until it
+		// has a free tile
 		while (!Main.run.chkBoard.chkTile(tile)) {
 			tile = random();
 		}
@@ -27,6 +28,7 @@ public class CompTurn {
 
 	/**
 	 * selects a random tile
+	 * 
 	 * @return the randomly selected tile
 	 */
 	private int random() {
@@ -34,4 +36,3 @@ public class CompTurn {
 		return rn.nextInt(7);
 	}
 }
-

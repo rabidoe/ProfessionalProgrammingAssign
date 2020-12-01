@@ -7,11 +7,11 @@ import org.eclipse.swt.widgets.*;
 
 /**
  * GUI class
- * @author ryand
- * 01/12/2020
+ * 
+ * @author ryand 01/12/2020 Ver 1.0.1
  */
 public class GUImain {
-	//create the GUI components
+	// create the GUI components
 	Display display = new Display();
 	Shell shell = new Shell(display);
 
@@ -28,11 +28,13 @@ public class GUImain {
 	Button bm = new Button(shell, SWT.PUSH);
 	Button br = new Button(shell, SWT.PUSH);
 
-	//create an array to hold all the game board buttons to allow for easier functionality
+	// create an array to hold all the game board buttons to allow for easier
+	// functionality
 	Button[] btnArray = { tl, tm, tr, ml, mm, mr, bl, bm, br };
 
 	/**
 	 * returns the length of the button array
+	 * 
 	 * @return length of btnArray
 	 */
 	public int btnArrayLength() {
@@ -41,6 +43,7 @@ public class GUImain {
 
 	/**
 	 * returns the button array to allow other classes access
+	 * 
 	 * @return value of btnArray
 	 */
 	public Button[] getBtnArray() {
@@ -62,7 +65,7 @@ public class GUImain {
 		display.dispose();
 	}
 
-	//creates the GUI
+	// creates the GUI
 	private void createGUI() {
 		Label label = new Label(shell, SWT.CENTER);
 		label.setSize(300, 20);
@@ -85,7 +88,7 @@ public class GUImain {
 		addButtonListeners();
 	}
 
-	//sets the location of the game board tiles
+	// sets the location of the game board tiles
 	private void setGameBoard() {
 		for (int i = 0; i < btnArray.length; i++) {
 			btnArray[i].setSize(75, 75);
@@ -104,14 +107,14 @@ public class GUImain {
 		disableButtons();
 	}
 
-	//sets the game board to a new game state
+	// sets the game board to a new game state
 	private void setupGameBoard() {
 		for (int i = 0; i < btnArray.length; i++) {
 			btnArray[i].setText("");
 		}
 	}
 
-	//adds listeners to the game board tiles
+	// adds listeners to the game board tiles
 	private void addButtonListeners() {
 		// add start button listener
 		startButton.addListener(SWT.Selection, new Listener() {
@@ -165,6 +168,7 @@ public class GUImain {
 
 	/**
 	 * handles the functionality of the game board tiles
+	 * 
 	 * @param btn the button that is being manipulated
 	 */
 	private void buttonHandler(Button btn) {
@@ -182,6 +186,7 @@ public class GUImain {
 
 	/**
 	 * changes the image(text) on the game board tiles
+	 * 
 	 * @param btn the button that is being manipulated
 	 */
 	private void setButtonImage(Button btn) {
@@ -197,6 +202,7 @@ public class GUImain {
 
 	/**
 	 * allows access to the button handler method by outside classes
+	 * 
 	 * @param btn button the be passed thru
 	 */
 	public void compHandler(Button btn) {
@@ -205,6 +211,7 @@ public class GUImain {
 
 	/**
 	 * sets the text of the status label
+	 * 
 	 * @param str status to be displayed
 	 */
 	public void setStatus(String str) {
@@ -212,4 +219,3 @@ public class GUImain {
 	}
 
 }
-
