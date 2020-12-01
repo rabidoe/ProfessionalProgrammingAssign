@@ -4,6 +4,7 @@ import java.util.Random;
  * Main class
  * @author ryand
  * 01/12/2020
+ * Ver 1.0.1
  */
 public class Main {
 	//create instances of classes
